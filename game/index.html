@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NEON HEIST — Shadow Protocol</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Courier New', monospace;
+  overflow: hidden;
+}
+#hud {
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #0a0a0a;
+  border: 1px solid #00ffff44;
+  border-bottom: none;
+}
+.hud-label { color: #00ffff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+#alarm-bar-wrap {
+  display: flex; align-items: center; gap: 8px;
+}
+#alarm-label { color: #ff4444; font-size: 11px; letter-spacing: 2px; }
+#alarm-bar-bg {
+  width: 160px; height: 14px;
+  background: #1a0000;
+  border: 1px solid #ff444488;
+  border-radius: 2px;
+  overflow: hidden;
+}
+#alarm-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ff4400, #ff0000);
+  transition: width 0.1s, background 0.1s;
+  box-shadow: 0 0 8px #ff0000;
+}
+#alarm-pct { color: #ff4444; font-size: 11px; min-width: 36px; text-align: right; }
+#score-val { color: #ffff00; font-size: 13px; font-weight: bold; }
+#canvas {
+  display: block;
+  border: 1px solid #00ffff44;
+  border-top: 2px solid #00ffff88;
+}
+#msg {
+  width: 800px;
+  padding: 6px 12px;
+  background: #0a0a0a;
+  border: 1px solid #00ffff44;
+  border-top: none;
+  color: #00ffff88;
+  font-size: 10px;
+  letter-spacing: 1px;
+  min-height: 22px;
+}
+</style>
+</head>
+<body>
+<div id="hud">
+  <span class="hud-label">NEON HEIST <span style="color:#ffffff44">v1.0</span></span>
+  <div id="alarm-bar-wrap">
+    <span id="alarm-label">⚠ ALARM</span>
+    <div id="alarm-bar-bg"><div id="alarm-bar"></div></div>
+    <span id="alarm-pct">0%</span>
+  </div>
+  <span class="hud-label">SCORE <span id="score-val">0</span></span>
+</div>
+<canvas id="canvas" width="800" height="560"></canvas>
+<div id="msg">WASD / Arrow keys to move &nbsp;·&nbsp; Reach the diamond &nbsp;·&nbsp; Avoid guards &amp; cameras</div>
+<script src="src/game.js"></script>
+</body>
+</html>
