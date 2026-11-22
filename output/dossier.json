@@ -1,0 +1,14 @@
+{
+  "title": "NEON HEIST \u2014 Shadow Protocol",
+  "description": "A neon cyberpunk heist game. Navigate a thief (cyan) through a maze past 5 guards with rotating vision cones (red) and 4 sweeping cameras (orange). Steal the loot diamond (yellow). Alarm meter fills when spotted \u2014 reach 100% and mission fails.",
+  "controls": "WASD or Arrow keys to move. R to restart.",
+  "features": [
+    "5 guards with rotating vision cones",
+    "4 sweeping security cameras",
+    "Alarm meter with visual feedback",
+    "LOS raycast detection",
+    "Neon cyberpunk aesthetic",
+    "Player glow trail",
+    "Win/lose screens with score"
+  ]
+}
